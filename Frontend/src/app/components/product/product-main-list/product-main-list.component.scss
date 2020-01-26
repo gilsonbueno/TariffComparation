@@ -1,0 +1,29 @@
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    &__item {
+        flex-direction: row;
+        width: 180px;
+        padding-bottom: 25px;
+        
+        &__label {
+            padding-right: 10px;
+        }
+        
+        &__value {
+            align-items: flex-end;
+            font-weight: bold;
+        }
+    }   
+}
+
+.list-group {
+    &__list-group-item{
+        &__item-header{
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+}

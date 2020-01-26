@@ -1,0 +1,57 @@
+<div class="col-md-8 offset-md-2 col-sm-12">
+  <h1 class="display-4 my-3">Products</h1>
+  <button class="btn btn-primary my-2" (click)="onAdd()">Create New Product</button>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="list-group">
+        <div *ngFor="let productItem of productItems" class="list-group-item list-group-item-action">
+          <div class="list-group__list-group-item__item-header">
+            <a (click)="productItem.isCollapsed = !productItem.isCollapsed">
+              <h5>{{ productItem.name }}</h5>
+            </a>
+          </div>
+          <div class="tab-pane">
+            <div *ngIf="productItem.isCollapsed">
+              <div class="card-content">
+                <div class="card-content__item">
+                  <div class="card-content__item__label">Tariff Type</div>
+                  <div class="card-content__item__value" *ngIf="productItem.consumeType === 1">Basic</div>
+                  <div class="card-content__item__value" *ngIf="productItem.consumeType === 2">Package</div>
+                </div>
+
+                <div class="card-content__item">
+                  <div class="card-content__item__label">Price kwh</div>
+                  <div class="card-content__item__value">{{ productItem.priceKwh }}€</div>
+                </div>
+
+                <div class="card-content__item">
+                  <div class="card-content__item__label">Price Period/Month</div>
+                  <div class="card-content__item__value">{{ productItem.pricePeriod }}€</div>
+                </div>
+
+                <div class="card-content__item">
+                  <div class="card-content__item__label">Limit Package kwh/year</div>
+                  <div class="card-content__item__value">{{ productItem.limitPackage }}</div>
+                </div>
+
+                <div class="card-content__item">
+                  <div class="card-content__item__label">Package Price/year</div>
+                  <div class="card-content__item__value">{{ productItem.pricePackage }}€</div>
+                </div>
+              </div>
+
+              <div class="d-flex flex-row-reverse">
+                <button class="btn btn-primary ml-2" (click)="onEdit(productItem.id)">Edit</button>
+                <button class="btn btn-danger ml-2" (click)="onDelete(productItem.id)">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="productItems.length === 0" class="alert alert-info">
+    There is no item to show.
+  </div>
+</div>

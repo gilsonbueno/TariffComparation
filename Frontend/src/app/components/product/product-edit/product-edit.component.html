@@ -1,0 +1,53 @@
+<div class="modal-header">
+  <h4 class="modal-title">Create or Update Product</h4>
+</div>
+<div class="modal-body">
+  <form [formGroup]="editForm" (ngSubmit)="onSave()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Name" formControlName="name">
+    </div>
+
+    <div class="form-group">
+      <label for="consumetype">Tariff Type:</label>
+      <select class="form-control" id="consumetype" formControlName="consumeType">
+        <option [ngValue]="null" disabled>Choose Tariff Type</option>
+        <option [ngValue]="1">Basic</option>
+        <option [ngValue]="2">Package</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="priceKwh">Price Kwh:</label>
+          <input type="number" class="form-control" id="priceKwh" placeholder="Enter priceKwh" formControlName="priceKwh">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="pricePeriod">Price Period:</label>
+          <input type="number" class="form-control" id="pricePeriod" placeholder="Enter pricePeriod" formControlName="pricePeriod">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="pricePackage">Price Package:</label>
+          <input type="number" class="form-control" id="pricePackage" placeholder="Enter pricePackage" formControlName="pricePackage">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="limitPackage">Limit Package:</label>
+          <input type="number" class="form-control" id="limitPackage" placeholder="Enter limitPackage" formControlName="limitPackage">
+        </div>
+      </div>
+    </div>
+    
+    <hr>
+    <button class="btn btn-primary" [disabled]="editForm.invalid" type="submit">Save</button>
+  </form>
+</div>
