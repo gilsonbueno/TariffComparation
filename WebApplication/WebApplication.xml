@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApplication</name>
+    </assembly>
+    <members>
+        <member name="T:WebApplication.Controllers.CompareController">
+            <summary>
+            Endpoint responsable to compare tariff
+            </summary>
+        </member>
+        <member name="M:WebApplication.Controllers.CompareController.GetList(System.Int32)">
+            <summary>
+            Return a list of tariff and the value based on the consumption
+            </summary>
+            <param name="consumption"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,20 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Basic Electricity Tariff",
+    "ConsumeType": 1,
+    "PriceKwh": 0.22,
+    "PricePeriod": 5,
+    "LimitPackage": 0,
+    "PricePackage": 0
+  },
+  {
+    "Id": 2,
+    "Name": "Packaged Tariff",
+    "ConsumeType": 2,
+    "PriceKwh": 0.30,
+    "PricePeriod": 0,
+    "LimitPackage": 4000,
+    "PricePackage": 800
+  }
+]

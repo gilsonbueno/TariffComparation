@@ -1,0 +1,3 @@
+Id,Name,ConsumeType,PriceKwh,PricePeriod,LimitPackage,PricePackage
+1,Basic Electricity Tariff,1,0.22,5,0,0
+2,Packaged Tariff,2,0.30,0,4000,800
